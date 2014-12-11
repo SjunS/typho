@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+
+  <style>
+    #pm:before{content:"PM";
+               font-size:8pt;
+               margin-left:-16.5px;
+              color: #ccc;}
+    #am:before{content:"AM";
+               font-size:8pt;
+               margin-left:-16.5px;
+              color: #ccc;}
+    body{font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+          }
+    #have{color:#666;}
+    ul{font-weight:300;
+      margin-left:10px;}
+    .scedules{margin-top:30px;
+              }
+    h2{font-weight:300;
+        font-size:25pt;
+        display:inline;
+        margin-left:25px;}
+    #monthly{color:black;
+            font-weight:500;}
+    .moons{color:#aaa}
+    #moon{font-weight:300;
+          font-size:15pt;
+          color:#999;}
+    .scedules div{color:#aaa;
+                  text-align: right;
+                  width: 50px;
+                  margin-left: -8px;}
+    ul{height:600px; 
+      overflow:scroll;}
+    ul li{margin-left:50px;
+          margin-top:-12px;
+          width:260px;
+          list-style:none;
+          border-top:1px solid #aaa;
+          line-height:1px}
+    h1{text-align:center;
+        font-weight:300;}
+    .saturday{font-weight:500;}
+    .sunday{font-weight:bold;}
+    #mon{font-size:8pt;
+    color:#999}
+    .days{height:10px;}
+    .schedule{height:90px;
+             font-size:10pt;
+              width:40px;}
+    #allbox{width:1101px;
+            height:700px;
+            margin:auto;
+            border:1px solid black;}
+    #month{width:700px;
+           float:left;
+           height:700px;
+           background-color:white;
+           }
+    #month table{margin:auto;
+                 font-weight:300;
+                 width: 600px;
+                 text-align:center;}
+    #month table tr td{width:50px;}
+    #today{border-bottom:2px solid black;
+            background-color:#ddd;}
+    div #month hr{width: 600px;
+                  text-align:center;}
+    div #today2 hr{width:280px; margin-top:-32px;}
+    .it {background-color:#ddd;
+            }
+    #today2{width:400px;
+           background-color:#eee;
+           border-left:1px solid #ccc;
+           height:680px;
+           float:left;
+           padding-top:20px;;
+           }
+    #month #day{margin-top:20px;}
+    .button{margin: 0px 20px;
+            font-size:30pt;
+            }
+    .not{color:#999;}
+  </style>
+</head>
+<body>
+<div id="allbox">
+  <div id="month">
+    <h1><span class="button"><</span>2014.<span id="monthly">12</span><span class="button">></span></h1>
+    <table>
+      <tr id="mon">
+        <td class="sunday">일</td>
+        <td>월</td>
+        <td>화</td>
+        <td>수</td>
+        <td>목</td>
+        <td>금</td>
+        <td class="saturday">토</td>
+      </tr>
+    </table>
+    <hr>
+    <table id="day">
+      <tr class="days">
+        <td class="sunday not">30</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td class="saturday">6</td>
+      </tr>
+      <tr class="schedule">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td valign=top class="moons">음10/15</td>
+      </tr>
+      <tr class="days">
+        <td class="sunday" id="today"><div>7</div></td>
+        <td>8</td>
+        <td>9</td>
+        <td class="it">10</td>
+        <td class="it">11</td>
+        <td>12</td>
+        <td class="saturday">13</td>
+      </tr>
+      <tr class="schedule">
+        <td valign=top>대림미술관</td>
+        <td></td>
+        <td></td>
+        <td valign=top>편집디자인<br>편집디자인</td>
+        <td valign=top>김수한무 거북..</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="days">
+        <td class="sunday">14</td>
+        <td>15</td>
+        <td>16</td>
+        <td>17</td>
+        <td>18</td>
+        <td>19</td>
+        <td class="saturday">20</td>
+      </tr>
+      <tr class="schedule">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="days">
+        <td class="sunday">21</td>
+        <td>22</td>
+        <td>23</td>
+        <td class="it">24</td>
+        <td>25</td>
+        <td>26</td>
+        <td class="saturday">27</td>
+      </tr>
+      <tr class="schedule">
+        <td></td>
+        <td valign=top class="moons">음11/1</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="days">
+        <td class="sunday">28</td>
+        <td>29</td>
+        <td>30</td>
+        <td>31</td>
+        <td class="not">1</td>
+        <td class="not">2</td>
+        <td class="saturday not">3</td>
+      </tr>
+      <tr class="schedule">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+  <div id="today2">
+    <h2>12/7</h2> <span id="moon">음10/16</span>
+    <ul>
+      <div class="scedules"><div id="am">12:00</div><li></li></div>
+      <div class="scedules"><div>1:00</div><li></li></div>
+      <div class="scedules"><div>2:00</div><li></li></div>
+      <div class="scedules"><div>3:00</div><li></li></div>
+      <div class="scedules"><div>4:00</div><li></li></div>
+      <div class="scedules"><div>5:00</div><li></li></div>
+      <div class="scedules"><div>6:00</div><li></li></div>
+      <div class="scedules"><div>7:00</div><li></li></div>
+      <div class="scedules"><div>8:00</div><li></li></div>
+      <div class="scedules"><div>9:00</div><li></li></div>
+      <div class="scedules"><div id="have">10:00</div><li><h4>대림 미술관</h4>경복궁역 3번 출구</li></div>
+      <div class="scedules"><div>11:00</div><li></li></div>
+      <div class="scedules"><div id="pm">12:00</div><li></li></div>
+      <div class="scedules"><div>1:00</div><li></li></div>
+      <div class="scedules"><div>2:00</div><li></li></div>
+      <div class="scedules"><div>3:00</div><li></li></div>
+      <div class="scedules"><div>4:00</div><li></li></div>
+      <div class="scedules"><div>5:00</div><li></li></div>
+      <div class="scedules"><div>6:00</div><li></li></div>
+      <div class="scedules"><div>7:00</div><li></li></div>
+      <div class="scedules"><div>8:00</div><li></li></div>
+      <div class="scedules"><div>9:00</div><li></li></div>
+      <div class="scedules"><div>10:00</div><li></li></div>
+      <div class="scedules"><div>11:00</div><li></li></div> 
+    </ul>
+    
+  </div>
+</div>
+</body>
+</html>
