@@ -1,0 +1,97 @@
+
+	*{text-decoration: none;}
+	body{ margin: 0 auto; width: 980px;}
+	.list{
+		position: fixed;
+		left: 80px;
+		top: 62px;}
+	.menu {
+		position: fixed;
+		top: 100px;
+		left: 40px;
+		width: 200px;}
+	.title{
+		position: absolute;
+		top: 60px;}
+	.home{
+		position: fixed;
+		left: 200px;
+		top: 60px;}
+	.profiletop{
+		position: absolute;
+		width: 780px;
+		height: 100px;
+		top: 100px;
+		overflow: hidden;}
+	.profile{position: absolute;
+		width: 300px;
+		margin-left: 480px;
+		top: 260px;}
+	.profiletopimg{width: 1000px}
+	.introduce{
+		position: absolute;
+		top: 260px;
+		}
+	#grid{ 
+		position: absolute;
+		margin-top: 150px;
+		width: 980px ;}
+	.image_grid1
+		{float: left;
+		margin: 5px; 
+		width: 550px; height: 300px; 
+		border: 2px solid gray;
+		overflow: hidden;
+		}
+	.image_grid2
+		{float: left;
+		margin: 5px; 
+		width: 402px; height: 142px; 
+		border: 2px solid gray; 
+		overflow: hidden;
+		}
+	.image_grid3
+		{float: left;
+		margin: 5px; 
+		width: 400px; height: 145px; 
+		border: 2px solid gray;
+		overflow: hidden;
+		}
+	.image_grid4
+		{float: left;
+		margin: 5px; 
+		width: 400px; height: 300px; 
+		border: 2px solid gray;
+		overflow: hidden;}
+	.image_grid5
+		{float: left;
+		margin: 5px; 
+		width: 240px; height: 300px; 
+		border: 2px solid gray;
+		overflow: hidden;}
+	.image_grid6
+		{float: left;
+		margin: 5px; 
+		width: 297px; height: 300px; 
+		border: 2px solid gray;
+		overflow: hidden;}
+	.image_grid7
+		{float: left;
+		margin: 5px; 
+		width: 297px; height: 300px; 
+		border: 2px solid gray;
+		overflow: hidden;}
+	.top{
+		position: fixed;
+		bottom: 30px;
+		right: 50px;
+		z-index: 100;
+		}
+	.work{position: absolute;
+		top: 150px;
+		 width: 980px;
+		}
+	.box{position: absolute;
+		top: 1500px;
+		height: 350px; width: 980px;
+		overflow: scroll;}
